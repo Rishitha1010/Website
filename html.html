@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="container">
+        <video autoplay loop muted id="Background-clip">
+            <source src="video4.mp4">
+        </video>
+        <div id="form">
+            <div id="logo">
+                <img src="colorlib.jpeg"></img>
+            </div>
+            <div id="login-box">
+                <form>
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Enter Username">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Enter Password">
+                    <div id="remember-me">
+                        <input type="checkbox">RememberMe
+                    <button type="submit" id="login-btn" onclick="alertbox()">Log In</button>
+                    </div>
+                    <div class="links">
+                        <a href="#">Lost your Password?</a> </div>
+                    <div class="links">
+                        <a href="#">Back to uiCookies</a>
+                    </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function alertbox(){
+            var username=document.getElementById("username").value;
+            var password=document.getElementById("password").value;
+            if(username.length==0){
+                alert("Enter a valid username");
+                return false;
+            }
+            else if(password.length<8){
+                alert("Password should atleast contain 8 characters.");
+                return false;
+            }
+            else{
+                window.alert(`Your Registeration is Successfully ${username}`);
+           }
+        }
+    </script>
+</body>
+</html>
