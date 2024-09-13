@@ -23,7 +23,7 @@
                     <input type="password" id="password" placeholder="Enter Password">
                     <div id="remember-me">
                         <input type="checkbox">RememberMe
-                    <button type="submit" id="login-btn" onclick="alertbox()">Log In</button>
+                    <button id="login-btn">Log In</button>
                     </div>
                     <div class="links">
                         <a href="#">Lost your Password?</a> </div>
@@ -35,11 +35,11 @@
         </div>
     </div>
     <script>
-        function alertbox(){
+        /*function alertbox(){
             var username=document.getElementById("username").value;
             var password=document.getElementById("password").value;
             if(username.length==0){
-                alert("Enter a valid username");
+                alert("Invalid User name");
                 return false;
             }
             else if(password.length<8){
@@ -47,9 +47,26 @@
                 return false;
             }
             else{
-                window.alert(`Your Registeration is Successfully ${username}`);
+                 window.alert(`Your Registeration is Successfully ${username}`);
+            }
+         }*/
+        const btn = document.getElementById("login-btn");
+        var username=document.getElementById("username");
+        console.log(username);
+        var password=document.getElementById("password");
+        btn.addEventListener('click', function() {
+            if(username.value.length == 0){
+                alert("Invalid User name");
+
+            }
+            else if(password.value.length<8){
+                alert("Password should atleast contain 8 characters.");
+
+            }
+            else{
+                alert(`Your Registeration is Successfully ${username.value}`);
            }
-        }
+        });
     </script>
 </body>
 </html>
