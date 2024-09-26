@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(./backgrndcolo.jpg.png);
+    background-size: cover;
+    background-position: center;
+}
+#form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-left: 0%;
+}
+.logo-container {
+    background-color: #5a4b81;
+    width: 90px;
+    padding: 10px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 30px; 
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.logo-text {
+    color: white;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+#p1{
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    color:#5a4b81;
+    font-weight: bolder;
+    padding: 10px;
+    margin-top: -20px;
+}
+#login-box {
+    display:flex;
+    width: 75%;
+    height: 275px;
+    align-items: center;
+    border: 5px solid #5a4b81;
+    padding: 40px;
+    border-radius: 10%;
+    color: white;
+    background: white;
+}
+#login-box input[type="text"],
+#login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: x solid;
+    border-radius: 10px;
+    margin-left: -10px;
+    font-size: 16px;
+    outline: none;
+
+}
+#login-btn {
+    width: 30%;
+    margin-top: 15px;
+    padding: 5px;
+    background-color:#5a4b81;
+    color: white;
+    border:none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+        <center>
+        <div id="form">
+                <div class="logo-container">
+                    <span class="logo-text">colorlib.</span>
+            </div>
+            <div id="login-box">
+                <form>
+                    <p id="p1">Sign Up</p>
+                    <input type="text" id="username" placeholder="Enter Username">
+                    <input type="password" id="password" placeholder="Enter Password">
+                    <input type="password" id="confirmpassword" placeholder="ReEnter Password">
+                    <button id="login-btn">Submit<a href="html.html"></a></button>
+                    </div>
+                    </form>
+            </div>
+        </center>
+        <script>
+            const btn = document.getElementById("login-btn");
+            var username=document.getElementById("username");
+            var password=document.getElementById("password");
+            var cpass = document.getElementById("confirmpassword");
+            var check = false;
+            btn.addEventListener('click', function(event) {
+                if(username.value.length == 0){
+                    alert("Invalid User name");
+
+                }
+                else if(password.value.length == 0){
+                    alert("Invalid Password");
+
+                }
+                else if(password.value.length<8){
+                    alert("Password should atleast contain 8 characters.");
+
+                }
+                else if(password.value!=cpass.value){
+                    alert("Both the passwords have to be same");
+
+                }
+                
+                else{
+                    alert(`Your Registeration is Successfully ${username.value}`);
+                    check=true;
+                    event.preventDefault();
+                }
+                if(check){
+                    window.location="html.html";
+                }
+            });
+
+    </script>
+</body>
+</html>

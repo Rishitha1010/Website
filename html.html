@@ -7,54 +7,38 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <div id="container">
-        <video autoplay loop muted id="Background-clip">
-            <source src="video4.mp4">
-        </video>
+        <center>
         <div id="form">
-            <div id="logo">
-                <img src="colorlib.jpeg"></img>
+                <div class="logo-container">
+                    <span class="logo-text">colorlib.</span>
             </div>
             <div id="login-box">
                 <form>
-                    <label>Username</label>
                     <input type="text" id="username" placeholder="Enter Username">
-                    <label>Password</label>
                     <input type="password" id="password" placeholder="Enter Password">
                     <div id="remember-me">
                         <input type="checkbox">RememberMe
                     <button id="login-btn">Log In</button>
                     </div>
                     <div class="links">
-                        <a href="#">Lost your Password?</a> </div>
+                        <a href="./signup.html">New User?</a>
+                    </div>
                     <div class="links">
-                        <a href="#">Back to uiCookies</a>
+                        <a href="for.html">Lost your Password?</a> </div>
+                    <div class="links">
+                        <a href="./Homepage.html">Back to Home</a>
                     </div>
                     </form>
             </div>
         </div>
+        </center>
     </div>
     <script>
-        /*function alertbox(){
-            var username=document.getElementById("username").value;
-            var password=document.getElementById("password").value;
-            if(username.length==0){
-                alert("Invalid User name");
-                return false;
-            }
-            else if(password.length<8){
-                alert("Password should atleast contain 8 characters.");
-                return false;
-            }
-            else{
-                 window.alert(`Your Registeration is Successfully ${username}`);
-            }
-         }*/
         const btn = document.getElementById("login-btn");
         var username=document.getElementById("username");
         console.log(username);
         var password=document.getElementById("password");
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function(event) {
             if(username.value.length == 0){
                 alert("Invalid User name");
 
@@ -68,7 +52,10 @@
 
             }
             else{
-                alert(`Your Registeration is Successfully ${username.value}`);
+                alert(`Login Successfully ${username.value}`);
+                window.location = "homepage2.html";
+                event.preventDefault();
+
            }
         });
     </script>

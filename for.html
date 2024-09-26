@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Your Password</title>
+    <link rel="stylesheet" href="fp.css">
+</head>
+<body>
+        <div id="fp">
+        <div class="logo-container">
+                    <span class="logo-text">colorlib.</span>
+            </div>
+            <div id="fp-box">
+                <form>
+                    <center><p id="p1">Forgot Password?</p>
+                    <input type="email" id="email" placeholder="Enter email:">
+                    <button type="submit" id="btn">Reset Password</button></center>
+                    </div>
+                </form>
+            </div>
+    <script>
+        const btn = document.getElementById("btn");
+        var email=document.getElementById("email");
+        var check = false;
+
+        btn.addEventListener('click', function(event) {
+            const Check = /^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if(!(email.value.match(Check))){
+                alert(`Enter a valid Email`);}
+            else{
+                alert(`Link has been sent to ${email.value}`);
+                check=true;
+                event.preventDefault();
+            }
+            if(check){
+                window.location="html.html";
+            }
+        });
+    </script>
+</body>
+</html>

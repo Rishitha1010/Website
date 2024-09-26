@@ -4,16 +4,10 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-}
-#container {
-    display: flex;
-    width: 100%;
-    height: 80%;
-    max-width: 1200px;
-}
-#Background-clip{
-    width: 50%;
-    background-size:cover ;
+    overflow: hidden;
+    background-image: url(./backgrndcolo.jpg.png);
+    background-size: cover;
+    background-position: center;
 }
 #form {
     width: 50%;
@@ -24,18 +18,32 @@ body {
     padding: 20px;
     margin-left: 0%;
 }
-
-#logo img{
-    width: 50px;
-    animation: animate 4s infinite;
-    margin-bottom: 30%;
+.logo-container {
+    background-color: #5a4b81;
+    width: 90px;
+    padding: 10px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 30px; 
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
-
+.logo-text {
+    color: white;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
 #login-box {
     display:flex;
-    width: 60%;
+    width: 100%;
     align-items: center;
-    max-width: 400px;
+    justify-content: center;
+    border: 5px solid #5a4b81 ; 
+    padding: 40px;
+    background:white;
+    border-radius: 10%;
+    color:black;
 
 }
 #login-box input[type="text"],
@@ -43,28 +51,30 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-left: -10px;
     font-size: 16px;
 }
-
 #remember-me {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     font-size: 16px;
+    margin-top: 15px;
+    color:black;
 }
 #login-btn {
-    width: 20%;
-    margin-top: 15px;
-    margin-left: 150px;
+    width: 30%;
+    margin-top: 10px;
+    margin-left: 100px;
     padding: 5px;
-    background-color:royalblue;
+    background-color:#5a4b81;
     color: white;
     border:none;
     font-size: 16px;
     cursor: pointer;
-    animation: animate 4s infinite;
+    border-radius: 10px;
 }
 .links{
     margin-top: 15px;
@@ -77,13 +87,5 @@ body {
     transition: color 0.3s ease;
 }
 .links a:hover {
-    color: royalblue;
-}
-@keyframes animate {
-    0%{
-        filter: hue-rotate(0deg);
-    }
-    100%{
-        filter: hue-rotate(360deg);
-    }
+    color: #5a4b81;
 }
